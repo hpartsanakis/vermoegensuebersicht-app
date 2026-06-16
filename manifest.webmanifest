@@ -1,0 +1,15 @@
+{
+  "name": "Vermoegensuebersicht",
+  "short_name": "Vermoegen",
+  "description": "Lokale Vermoegensuebersicht mit Vermoegen, Schulden, Cashflow, Auswertung und Backup.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f5f7f4",
+  "theme_color": "#126c57",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
