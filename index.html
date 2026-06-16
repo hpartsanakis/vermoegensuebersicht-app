@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vermögensübersicht - Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <a class="brand" href="index.html">Vermögensübersicht</a>
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a class="active" href="index.html">Dashboard</a
+        ><a href="assets.html">Vermögen</a><a href="debts.html">Schulden</a
+        ><a href="cashflow.html">Cashflow</a
+        ><a href="reports.html">Auswertung</a><a href="settings.html">Export</a>
+      </nav>
+    </header>
+    <main class="page">
+      <section class="page-title">
+        <div>
+          <p class="eyebrow">Lokale Daten</p>
+          <h1>Dashboard</h1>
+        </div>
+        <button class="primary" data-save-snapshot>Monat speichern</button>
+      </section>
+      <section class="metric-grid">
+        <article class="metric">
+          <span>Gesamtvermögen</span><strong data-total-assets>0 EUR</strong>
+        </article>
+        <article class="metric">
+          <span>Gesamtschulden</span><strong data-total-debts>0 EUR</strong>
+        </article>
+        <article class="metric accent">
+          <span>Nettovermögen</span><strong data-net-worth>0 EUR</strong>
+        </article>
+        <article class="metric">
+          <span>Freie Liquidität</span><strong data-liquidity>0 EUR</strong>
+        </article>
+        <article class="metric">
+          <span>Monatsüberschuss</span><strong data-surplus>0 EUR</strong>
+        </article>
+        <article class="metric">
+          <span>Sparquote</span><strong data-savings-rate>0 %</strong>
+        </article>
+      </section>
+      <section class="split">
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Monatliche Entwicklung</h2>
+            <span data-snapshot-count>0 Monate</span>
+          </div>
+          <div class="chart" data-net-worth-chart></div>
+        </div>
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Schnellerfassung</h2>
+            <span>Basisdaten</span>
+          </div>
+          <form class="stack" data-quick-asset-form>
+            <input
+              name="name"
+              placeholder="Name, z. B. Girokonto"
+              required
+            /><select name="category" required data-asset-categories></select
+            ><input
+              name="value"
+              type="number"
+              step="0.01"
+              min="0"
+              placeholder="Aktueller Wert"
+              required
+            /><button class="primary" type="submit">Vermögen speichern</button>
+          </form>
+        </div>
+      </section>
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Letzte Einträge</h2>
+          <span>Vermögen und Schulden</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Typ</th>
+                <th>Name</th>
+                <th>Kategorie</th>
+                <th class="right">Wert</th>
+              </tr>
+            </thead>
+            <tbody data-recent-items></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

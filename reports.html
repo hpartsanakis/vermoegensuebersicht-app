@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Auswertung</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <a class="brand" href="index.html">Vermögensübersicht</a>
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="index.html">Dashboard</a><a href="assets.html">Vermögen</a
+        ><a href="debts.html">Schulden</a><a href="cashflow.html">Cashflow</a
+        ><a class="active" href="reports.html">Auswertung</a
+        ><a href="settings.html">Export</a>
+      </nav>
+    </header>
+    <main class="page">
+      <section class="page-title">
+        <div>
+          <p class="eyebrow">Analyse</p>
+          <h1>Auswertungen</h1>
+        </div>
+        <button class="ghost" data-print-report>PDF Bericht</button>
+      </section>
+      <section class="two-columns">
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Vermögen nach Kategorie</h2>
+            <span data-total-assets>0 EUR</span>
+          </div>
+          <div class="bars" data-asset-bars></div>
+        </div>
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Schulden nach Kategorie</h2>
+            <span data-total-debts>0 EUR</span>
+          </div>
+          <div class="bars" data-debt-bars></div>
+        </div>
+      </section>
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Nettovermögen pro Monat</h2>
+          <span data-snapshot-count>0 Monate</span>
+        </div>
+        <div class="chart tall" data-net-worth-chart></div>
+      </section>
+      <section class="metric-grid compact">
+        <article class="metric">
+          <span>Kreditabbau</span><strong data-debt-paydown>0 EUR</strong>
+        </article>
+        <article class="metric">
+          <span>Investmententwicklung</span
+          ><strong data-investment-value>0 EUR</strong>
+        </article>
+        <article class="metric">
+          <span>Altersvorsorge</span
+          ><strong data-retirement-value>0 EUR</strong>
+        </article>
+        <article class="metric">
+          <span>Liquiditätsreserve</span><strong data-liquidity>0 EUR</strong>
+        </article>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

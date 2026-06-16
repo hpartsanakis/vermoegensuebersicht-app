@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Backup und Export</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <a class="brand" href="index.html">Vermögensübersicht</a>
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="index.html">Dashboard</a><a href="assets.html">Vermögen</a
+        ><a href="debts.html">Schulden</a><a href="cashflow.html">Cashflow</a
+        ><a href="reports.html">Auswertung</a
+        ><a class="active" href="settings.html">Export</a>
+      </nav>
+    </header>
+    <main class="page">
+      <section class="page-title">
+        <div>
+          <p class="eyebrow">Sicherung</p>
+          <h1>Backup und Export</h1>
+        </div>
+      </section>
+      <section class="two-columns">
+        <div class="panel stack">
+          <h2>Export</h2>
+          <button class="primary" data-export-json>Backup als JSON</button
+          ><button class="ghost" data-export-csv>CSV Export</button
+          ><button class="ghost" data-print-report>PDF Bericht</button>
+        </div>
+        <div class="panel stack">
+          <h2>Wiederherstellung</h2>
+          <input
+            type="file"
+            accept="application/json,.json"
+            data-import-json
+          /><button class="danger" data-clear-data>
+            Alle lokalen Daten loeschen
+          </button>
+        </div>
+      </section>
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Dokumentenstruktur</h2>
+          <span>Empfohlene Ordner</span>
+        </div>
+        <div class="folder-grid">
+          <div>01_Banken</div>
+          <div>02_Investments</div>
+          <div>03_Immobilien</div>
+          <div>04_Kredite</div>
+          <div>05_Versicherungen</div>
+          <div>06_Rente</div>
+          <div>07_Steuern</div>
+          <div>08_Notfallordner</div>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
